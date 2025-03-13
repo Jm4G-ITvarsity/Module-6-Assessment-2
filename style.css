@@ -1,0 +1,456 @@
+/* ************************************************************* */
+/*                    Universal Styles                           */
+/* ************************************************************* */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #363636;
+}
+
+p {
+    line-height: 190%;
+}
+
+a {
+    text-decoration: none;
+    color: teal;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ************************************************************* */
+/*                           Menu                                */
+/* ************************************************************* */
+
+#menu {
+    background-color: #36454F;
+    height: 100px;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#menu li {
+    display: inline-block;
+}
+
+#menu a {
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 100px;
+    color: white;
+    padding: 0 40px;
+    border: none;
+    display: block;
+}
+
+#menu a:hover {
+    background-color: #E5E4E2;
+    color: #363636;
+}
+
+/* ************************************************************* */
+/*                         Banner                                */
+/* ************************************************************* */
+
+#banner-contact {
+    height: 520px;
+    overflow: hidden;
+    text-align: center;
+    background-image: url(images/contact.jpg);
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    top: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner-gallery {
+    height: 520px;
+    overflow: hidden;
+    text-align: center;
+    background-image: url(images/gallery.png);
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    top: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner {
+    height: 520px;
+    overflow: hidden;
+    text-align: center;
+    background-image: url(images/gear-stick-front-part-brand-new-automobile-modern-black-interior-conception-vehicles.jpg);
+    width: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    top: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner-contact img,
+#banner-gallery img,
+#banner img {
+    width: 100%;
+    
+    /* height: 300px; */
+}
+
+/* ************************************************************* */
+/*                         Banner Text                           */
+/* ************************************************************* */
+
+
+#banner-text {
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left: 260px;
+    text-align: center;
+}
+
+#banner-text h1 {
+    text-shadow: 0 0 25px #1e1b1a;
+    margin-bottom: 0;
+    letter-spacing: 0.1em;
+    font-size: 150px;
+    color: white;
+}
+
+#banner-text p {
+    letter-spacing: 0.1em;
+    color: white;
+    font-weight: 500;
+}
+
+
+/* ************************************************************* */
+/*                           Page                                */
+/* ************************************************************* */
+
+#page {
+    min-height: 400px;
+    padding: 20px;
+}
+
+#page h2 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    color: #16a085;
+}
+
+/* CONTENT */
+
+.pic-links {
+    margin: 30px 50px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.pic-links img {
+    transition: transform .2s;
+    background-color:#adadad;
+    padding: 10px;
+}
+
+.pic-links img:hover {
+    transform: scale(1.2);
+}
+
+#content {
+    float: left;
+    width: 70%;
+}
+
+
+
+/* ************************************************************* */
+/*                       Portfolio Items                         */
+/* ************************************************************* */
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1em;
+    padding: 1em;
+    background-color:white;
+    /* border: 2px solid #adadad; */
+}
+
+.portfolio-item {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+}
+
+.portfolio-item img {
+    margin: auto;
+}
+
+.button {
+    margin: auto 34%;
+    background-color:#16a085;
+    border-radius: 6px;
+    padding: 4px 7px;
+    color: white;
+
+}
+
+.portfolio-desc {
+    padding: 1.5em;
+}
+
+.portfolio-title {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.portfolio-lightbox {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: transform ease-in-out 300ms;
+}
+
+.portfolio-lightbox:target {
+    transform: scale(1,1);
+    transform: right;
+}
+
+.portfolio-lightbox-content {
+   
+    width: 85%;
+    background: black;
+    padding: 1em;
+    position: relative;
+    margin: auto;
+}
+
+.portfolio-lightbox-title {
+    font-size: 2em;
+}
+
+.close {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: red;
+    top: 0.1em;
+    right: -1em;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.close::after {
+    content: 'X';
+    color: white;
+    font-weight: 700;
+}
+
+/* SLIDER */
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 3em;
+    z-index: 12;
+    display: flex;
+    float: left;
+}
+
+.slider {
+    display: flex;
+     aspect-ratio: 16/13;
+     overflow-x: auto;
+     scroll-snap-type: x mandatory;
+     scroll-behavior: smooth;
+     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+     border-radius: 0.5rem;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translatex(-50%);
+    z-index: 13;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #16a085;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-content {
+   text-align: center;
+   margin-top: 4em;
+   float: right;
+   width: 30%;
+   border:solid 1px #adadad;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+}
+
+h4 {
+    background-color: #adadad;
+    border-radius: 5px;
+    color: #363636;
+    padding: 1em 2em;
+    margin-right: 3em; 
+    margin-left: 3em;
+    text-align: center;
+}
+
+/* SIDEBAR */
+
+#sidebar {
+    float: right;
+    width: 25%;
+}
+
+ul.styled {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+} 
+
+ul.styled li {
+    border-top: solid 1px #e5e5e5;
+    padding: 14px 0px;
+}
+
+/* ************************************************************* */
+/*                         Footer                                */
+/* ************************************************************* */
+
+#footer {
+    width: 100%;
+    height: 340px;
+    background-color: #1e1b1a;
+    padding-top: 25px;
+    padding-left: 22px;
+    clear: both;
+}
+
+#footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+#footer p,
+#footer a {
+    color: #adadad;
+}
+
+#box1 {
+    float: left;
+    width: 30%;
+    padding-right: 30px;
+}
+
+#box2 {
+    float: left;
+    width: 30%;
+    padding-right: 30px;
+}
+
+#box3 {
+    float: right;
+    width: 30%;
+    padding-left: 30px;
+}
+
+/* ************************************************************* */
+/*                       Copyright                               */
+/* ************************************************************* */
+
+#copyright {
+    width: 100%;
+    height: 130px;
+    text-align: center;
+    background-color: #36454F;
+    padding-top: 55px;
+    clear: both;
+}
+
+#copyright p {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #adadad;
+}
+
+/* ************************************************************* */
+/*                         Gallery                               */
+/* ************************************************************* */
+
+/* #gallery img {
+    width: 120px;
+    margin: 12px;
+    -moz-transition: -moz-transform 0.5s ease-in;
+	-webkit-transition: -webkit-transform 0.5s ease-in;
+	-o-transition: -o-transform 0.5s ease-in;
+}
+
+#gallery img:hover {
+	-moz-transform: scale(3);
+	-webkit-transform: scale(3);
+	-o-transform: scale(3);
+} */
